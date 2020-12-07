@@ -4,7 +4,7 @@ dependencies:
   express: 4.17.1
   express-urlrewrite: 1.3.0
   ioredis: 4.19.2
-  jose: 3.3.1
+  jose: 2.0.3
   lodash: 4.17.20
   lowdb: 1.0.0
   oidc-provider: 6.29.8
@@ -655,10 +655,6 @@ packages:
       node: '>=10.13.0 < 13 || >=13.7.0'
     resolution:
       integrity: sha512-L+RlDgjO0Tk+Ki6/5IXCSEnmJCV8iMFZoBuEgu2vPQJJ4zfG/k3CAqZUMKDYNRHIDyy0QidJpOvX0NgpsAqFlw==
-  /jose/3.3.1:
-    dev: false
-    resolution:
-      integrity: sha512-dMVfVKnyJyl2d9OBkwu/nvheGh9fbS1khhkJdvbGnINNe8IUfSJ/U+BXJOQvk65BCIJ58lp7xQKJTGQQ5dxrZA==
   /jsesc/3.0.2:
     dev: false
     engines:
@@ -1166,7 +1162,7 @@ specifiers:
   express: ^4.17.1
   express-urlrewrite: ^1.3.0
   ioredis: ^4.19.2
-  jose: ^3.3.1
+  jose: '2'
   lodash: ^4.17.20
   lowdb: ^1.0.0
   oidc-provider: ^6.29.8
