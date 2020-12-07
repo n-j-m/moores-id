@@ -129,7 +129,7 @@ expressApp.post('/interaction/:uid/login', setNoCache, parse, async (req, res, n
   }
 });
 
-expressApp.post('/interaction/:uid/confirm', setNoCach, async (req, res, next) => {
+expressApp.post('/interaction/:uid/confirm', setNoCache, async (req, res, next) => {
   try {
     const result = {
       erro: 'access_denied',
