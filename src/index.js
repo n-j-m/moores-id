@@ -18,7 +18,7 @@ const oidc = new Provider(`https://${process.env.HEROKU_APP_NAME}.herokuapp.com`
 
 oidc.proxy = true;
 
-oidc.keys = proces.env.SECURE_KEY.split(',');
+oidc.keys = process.env.SECURE_KEY.split(',');
 
 const port = process.env.PORT;
 oidc.listen(port);
