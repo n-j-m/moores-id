@@ -4,7 +4,6 @@ const Memory = require('lowdb/adapters/Memory');
 const db = low(new Memory());
 
 const assert = require('assert');
-const { createBrotliCompress } = require('zlib');
 
 db.defaults({
   users: [
@@ -24,13 +23,14 @@ db.defaults({
 class Account {
   // This interface is required by oidc-provider
   static async findAccount(ctx, id) {
-    // This would ideally be just a check wheter the account is still in your storage
+    // This would ideally be just a check whether the account is still in your storage
     const account = db.get('users').find({ id }).value();
     if (!account) {
       return undefined;
     }
 
     return {
+      accountId: id,
       // and this claims() method would actually query to retrieve the account claims
       async claims() {
         return {
