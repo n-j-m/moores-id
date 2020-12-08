@@ -82,7 +82,7 @@ class RedisAdapter {
     };
   }
 
-  async findById(uid) {
+  async findByUid(uid) {
     const id = await client.get(uidKeyFor(uid));
     return this.find(id);
   }
